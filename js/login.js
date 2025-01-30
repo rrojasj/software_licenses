@@ -21,6 +21,8 @@ const user3 = {
     password: "sm123"
 }
 
+const loginForm = document.getElementById('login-form');
+
 document.addEventListener("DOMContentLoaded", () => {
 
     localStorage.setItem("user1", JSON.stringify(user1));
@@ -43,7 +45,46 @@ document.addEventListener("DOMContentLoaded", () => {
     //         alert("Usuario o contraseña incorrectos");
     //     }
     // });
-})
+});
+
+loginForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const userName = document.getElementById("input-username").value;
+    const userPswd = document.getElementById("input-pswd").value;
+
+
+});
+
+function validateLoginInputs() {
+    let allValid = true;
+
+    const loginFields = [
+        {id: 'input-username', name: 'username'},
+        {id: 'input-pswd', name: 'password'}
+    ];
+
+    loginFields.forEach((field, index) => {
+        const input = document.getElementById(field.id);
+        const inputValue = input?.value.trim();
+
+        if(!input) {
+            console.error(`El elemento con el ID '${field.id}' no ha sido encontrado`);
+            allValid = false;
+            return;
+        }
+    
+        if (inputValue === '') {}
+    });
+
+
+    
+
+    
+}
+
+
+
+
 
 
 
