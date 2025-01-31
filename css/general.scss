@@ -102,12 +102,16 @@ $color-palette-p-1-transp: rgba(209, 209, 209, 0.147);
 $color-palette-p-2-transp: rgba(94, 39, 154, 0.4);
 $color-palette-p-3-transp: rgba(53, 228, 222, 0.56);
 
+// RRSS
 $color-contact-whatsapp: #22BF5B;
 $color-contact-whatsapp-hover: #15793A;
 $color-contact-instagram: #D61F5C;
 $color-contact-instagram-hover: #8F143D;
 $color-contact-linkedin: #0AA9FF;
 $color-contact-linkedin-hover: #0077B5;
+
+// Error
+$color-error-message: #FF2C2C;
 
 // Borders
 $border-radius-btn: 50px;
@@ -133,6 +137,15 @@ label, input::placeholder {
     font-family: $font-lato-sans;
 }
 
-.missing-required-input {
-    border: $px-2 solid $pa;
+.error-input {
+    border: $px-1 solid $color-error-message !important;
+}
+#error-msg-username,
+#error-msg-pswd {
+    font-size: smaller;
+    color: $color-error-message;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.156) !important;
 }
