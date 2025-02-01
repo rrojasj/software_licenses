@@ -1,0 +1,20 @@
+@import "general.scss";
+
+
+
+.dark-background {
+    background: linear-gradient(45deg, $color-palette-s-2, $color-palette-s-3); /* Adjust colors as needed */
+}
+
+.btn {
+    background-color: $color-palette-p-3 !important;
+}
+
+.btn-sm-primary:hover {
+    background-color: $color-palette-p-3-transp !important;
+}
+
+.login-box {
+    border: 1px solid $color-palette-p-2;
+    border-radius: 10px;
+}

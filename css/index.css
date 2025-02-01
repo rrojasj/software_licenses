@@ -30,15 +30,11 @@ label, input::placeholder {
   background-color: rgba(255, 255, 255, 0.156) !important;
 }
 
-input {
-  min-width: 18.75rem;
-}
-
 .dark-background {
   background: linear-gradient(45deg, #823BCE, #6FEBE7); /* Adjust colors as needed */
 }
 
-.btn-sm-primary {
+.btn {
   background-color: rgb(53, 228, 222) !important;
 }
 
@@ -49,4 +45,4 @@ input {
 .login-box {
   border: 1px solid rgb(94, 39, 154);
   border-radius: 10px;
-}/*# sourceMappingURL=login.css.map */
+}/*# sourceMappingURL=index.css.map */

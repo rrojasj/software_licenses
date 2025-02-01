@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>SmartKey</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="imgs/sm_favicon.png" type="image/x-con">
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./css/general.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+
+
+
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="imgs/sm_logo_1.png" alt="" width="70" height="64" class="d-inline-block align-text-top">
+          </a>
+          <div class="d-flex ms-auto align-items-center">
+            <span class="me-3">Usuario: <strong id="nombreUsuario">Juan Pérez</strong></span>
+            <span class="me-3">Cédula: <strong id="cedulaUsuario">123456789</strong></span>
+            <button class="btn btn-sm" id="cerrarSesion">Cerrar sesión</button>
+          </div>
+        </div>
+      </nav>
+
+
+      <div class="container mt-5">
+        <h2 class="text-center mb-4">Selecciona Licencias de Software</h2>
+      
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card p-4">
+              <h5 class="text-center">Lista de Licencias Disponibles</h5>
+              <label for="listaLicencias" class="form-label">Selecciona una licencia:</label>
+              <select id="listaLicencias" class="form-select">
+                <option value="" disabled selected>Seleccione una licencia...</option>
+              </select>
+              <button class="btn mt-3 w-100" id="agregarBtn">Agregar Licencia</button>
+            </div>
+          </div>
+      
+    
+          <div class="col-md-6">
+            <div class="card p-4 shadow">
+              <h5 class="text-center">Licencias Seleccionadas</h5>
+              <ul id="licenciasSeleccionadas" class="list-group">
+                <li class="list-group-item">Ninguna licencia seleccionada</li>
+              </ul>
+              <button class="btn mt-3 w-100" id="limpiarBtn">Limpiar Selección</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <script src="js/index.js"></script>
