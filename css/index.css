@@ -70,7 +70,7 @@ h3 {
   color: #5e279a;
 }
 
-.logoutBtn {
+#logoutBtn {
   text-decoration: none;
   color: rgba(94, 39, 154, 0.4);
 }
@@ -79,9 +79,9 @@ h3 {
   margin-bottom: 16px;
 }
 
-.logoutBtn:hover {
+#logoutBtn:hover {
   transition: color 0.3s ease-in-out;
 }
-.logoutBtn:hover:hover {
+#logoutBtn:hover:hover {
   color: #5e279a;
 }/*# sourceMappingURL=index.css.map */

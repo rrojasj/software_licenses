@@ -25,7 +25,7 @@ h3 {
     color: $color-palette-p-2;
 }
 
-.logoutBtn {
+#logoutBtn {
     text-decoration: none;
     color: $color-palette-p-2-transp;
 }
@@ -34,7 +34,7 @@ h3 {
     margin-bottom: $rem-1;
 }
 
-.logoutBtn:hover {
+#logoutBtn:hover {
     transition: color 0.3s ease-in-out;
 
     &:hover {
