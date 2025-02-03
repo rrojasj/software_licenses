@@ -1,60 +1,95 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
     <head>
         <title>SmartKey</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="imgs/sm_favicon.png" type="image/x-con">
-        <link rel="stylesheet" href="./css/index.css">
-        <link rel="stylesheet" href="./css/general.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/general.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </head>
 
-
-
-
-    <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="imgs/sm_logo_1.png" alt="" width="70" height="64" class="d-inline-block align-text-top">
-          </a>
-          <div class="d-flex ms-auto align-items-center">
-            <span class="me-3">Usuario: <strong id="nombreUsuario">Juan Pérez</strong></span>
-            <span class="me-3">Cédula: <strong id="cedulaUsuario">123456789</strong></span>
-            <button class="btn btn-sm" id="cerrarSesion">Cerrar sesión</button>
-          </div>
-        </div>
-      </nav>
-
-
-      <div class="container mt-5">
-        <h2 class="text-center mb-4">Selecciona Licencias de Software</h2>
-      
-        <div class="row">
-          <div class="col-md-6">
-            <div class="card p-4">
-              <h5 class="text-center">Lista de Licencias Disponibles</h5>
-              <label for="listaLicencias" class="form-label">Selecciona una licencia:</label>
-              <select id="listaLicencias" class="form-select">
-                <option value="" disabled selected>Seleccione una licencia...</option>
-              </select>
-              <button class="btn mt-3 w-100" id="agregarBtn">Agregar Licencia</button>
+    <header>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="imgs/sm_logo_200x100.webp" alt="" width="100" height="50" class="d-inline-block align-text-top">
+                </a>
+                <div class="nav-section-right">
+                    <div class="userInfoSection">
+                        <p>ID: <strong id="idUsuario"></strong></p>
+                        <p>Usuario: <strong id="nombreUsuario"></strong></p>
+                    </div>
+                    <div>
+                        <a class="logoutBtn" href="login.html">Cerrar sesión</a>
+                    </div>
+                </div>
             </div>
-          </div>
-      
+        </nav>
+    </header>
+
+    <section class="container">
+        <div class="pt-5">
+            <h1 class="text-center">Licencias de Software</h1>
     
-          <div class="col-md-6">
-            <div class="card p-4 shadow">
-              <h5 class="text-center">Licencias Seleccionadas</h5>
-              <ul id="licenciasSeleccionadas" class="list-group">
-                <li class="list-group-item">Ninguna licencia seleccionada</li>
-              </ul>
-              <button class="btn mt-3 w-100" id="limpiarBtn">Limpiar Selección</button>
-            </div>
-          </div>
+            <div class="pt-5"></div>
+    
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title text-center">Licencias disponibles</h3>
+                </div>
+                <div class="card-body">
+                    <div class="pt-5"></div>
+                    
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <label for="listaLicencias" class="form-label">Nombre de licencia:</label>
+                            <select id="listaLicencias" class="form-select">
+                                <option value="" selected></option>
+                            </select>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <label for="tipoLicencias" class="form-label">Tipo de licencia:</label>
+                            <select id="tipoLicencias" class="form-select">
+                                <option value="" selected></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="pt-5 text-center">
+                        <a id="agregarBtn" href="#" class="btn btn-sm-primary">Agregar</a>
+                    </div>
+                </div>
+            </div> 
         </div>
-      </div>
+    </section>
 
+    <section class="container pt-5">
+        <div class="card text-center">
+            <div class="card-header">
+                <h3>Licencias a registrar</h3>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Licencia</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rs-table-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="pt-5 d-flex justify-content-center">
+            <button id="comprarBtn" type="button" class="btn btn-success disabled">Comprar</button>
+        </div>
+    </section>
 
-
-      <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</html>

@@ -4,7 +4,7 @@ html {
   font-size: 16px;
 }
 
-h1 {
+h1, h2, h3 {
   font-family: "Exo 2", serif;
 }
 
@@ -16,6 +16,7 @@ label, input::placeholder {
   font-family: "Lato", sans-serif;
 }
 
+/* ******************* Error messages - validation ******************* */
 .error-input {
   border: 0.063rem solid #FF2C2C !important;
 }
@@ -26,8 +27,18 @@ label, input::placeholder {
   color: #FF2C2C;
 }
 
+/* ******************* Cards ******************* */
 .card {
   background-color: rgba(255, 255, 255, 0.156) !important;
+}
+
+/* ******************* SM Primary button ******************* */
+.btn-sm-primary {
+  background-color: #35e4de !important;
+}
+
+.btn-sm-primary:hover {
+  background-color: rgba(53, 228, 222, 0.56) !important;
 }
 
 input {
@@ -38,15 +49,7 @@ input {
   background: linear-gradient(45deg, #823BCE, #6FEBE7); /* Adjust colors as needed */
 }
 
-.btn-sm-primary {
-  background-color: rgb(53, 228, 222) !important;
-}
-
-.btn-sm-primary:hover {
-  background-color: rgba(53, 228, 222, 0.56) !important;
-}
-
 .login-box {
-  border: 1px solid rgb(94, 39, 154);
+  border: 1px solid #5e279a;
   border-radius: 10px;
 }/*# sourceMappingURL=login.css.map */

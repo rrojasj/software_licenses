@@ -86,13 +86,13 @@ $font-size-btn: 1rem;
 
 // Color Palette #1
 // https://coolors.co/313A42-DB3939-F2F6FC
-$color-palette-p-1: rgb(209, 209, 209);
-$color-palette-p-2: rgb(94, 39, 154);
-$color-palette-p-3: rgb(53, 228, 222);
+$color-palette-p-1: #d1d1d1;
+$color-palette-p-2: #5e279a;
+$color-palette-p-3: #35e4de;
 
 // Color Palette #2
 // https://coolors.co/4E5D6A-E67575-DEE8F7
-$color-palette-s-1: #B8B8B8;
+$color-palette-s-1: #474747;
 $color-palette-s-2: #823BCE;
 $color-palette-s-3: #6FEBE7;
 
@@ -129,7 +129,7 @@ html {
     font-size: $font-size-base;
 }
 
-h1 {
+h1, h2, h3 {
     font-family: $font-exo-2;
 }
 
@@ -137,6 +137,7 @@ label, input::placeholder {
     font-family: $font-lato-sans;
 }
 
+/* ******************* Error messages - validation ******************* */
 .error-input {
     border: $px-1 solid $color-error-message !important;
 }
@@ -146,6 +147,20 @@ label, input::placeholder {
     color: $color-error-message;
 }
 
+.nav-section-right p {
+    margin-bottom: 0;
+}
+
+/* ******************* Cards ******************* */
 .card {
     background-color: rgba(255, 255, 255, 0.156) !important;
+}
+
+/* ******************* SM Primary button ******************* */
+.btn-sm-primary {
+    background-color: $color-palette-p-3 !important;
+}
+
+.btn-sm-primary:hover {
+    background-color: $color-palette-p-3-transp !important;
 }

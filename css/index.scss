@@ -1,13 +1,15 @@
 @import "general.scss";
 
+h1 {
+    color: $color-palette-s-1 !important;
+}
 
+h3 {
+    color: $color-palette-s-2 !important;
+}
 
 .dark-background {
     background: linear-gradient(45deg, $color-palette-s-2, $color-palette-s-3); /* Adjust colors as needed */
-}
-
-.btn {
-    background-color: $color-palette-p-3 !important;
 }
 
 .btn-sm-primary:hover {
@@ -17,4 +19,25 @@
 .login-box {
     border: 1px solid $color-palette-p-2;
     border-radius: 10px;
+}
+
+.nav-section-right {
+    color: $color-palette-p-2;
+}
+
+.logoutBtn {
+    text-decoration: none;
+    color: $color-palette-p-2-transp;
+}
+
+.userInfoSection {
+    margin-bottom: $rem-1;
+}
+
+.logoutBtn:hover {
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+        color: $color-palette-p-2;
+    }
 }
